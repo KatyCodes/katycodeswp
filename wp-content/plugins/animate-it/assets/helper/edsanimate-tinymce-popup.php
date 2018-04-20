@@ -86,13 +86,50 @@ $scroll_offset = get_option ( 'eds_scroll_offset', '75' );
 										<option value="spinner">Spin</option>
 										<option value="bounce">bounce</option>
 										<option value="flash">flash</option>
-										<option value="pulse">pulse</option>
 										<option value="rubberBand">rubberBand</option>
 										<option value="shake">shake</option>
 										<option value="swing">swing</option>
 										<option value="tada">tada</option>
 										<option value="wobble">wobble</option>
 										<option value="jello">jello</option>
+										<option value="wiggle">wiggle</option>
+										<option value="fade">fade</option>
+										<option value="appear">appear</option>
+										<option value="grow">grow</option>
+										<option value="shrink">shrink</option>
+										<option value="push">push</option>
+										<option value="pop">pop</option>
+										<option value="float">float</option>
+										<option value="sink">sink</option>
+										<option value="forward">forward</option>
+										<option value="backward">backward</option>
+									</optgroup>
+									<optgroup label="Pulse">
+										<option value="pulse">pulse</option>
+										<option value="pulseGrow">pulseGrow</option>
+										<option value="pulseShrink">pulseShrink</option>
+									</optgroup>
+									<optgroup label="Rotate">
+										<option value="rotate">rotate</option>
+										<option value="growRotate">growRotate</option>
+									</optgroup>
+									<optgroup label="Skew">
+										<option value="skew">skew</option>
+										<option value="skewForward">skewForward</option>
+										<option value="skewBackward">skewBackward</option>
+									</optgroup>
+									<optgroup label="Wobble">
+										<option value="wobbleHorizontal">wobbleHorizontal</option>
+										<option value="wobbleVertical">wobbleVertical</option>
+										<option value="wobbleToBottomRight">wobbleToBottomRight</option>
+										<option value="wobbleToTopRight">wobbleToTopRight</option>
+										<option value="wobbleTop">wobbleTop</option>
+										<option value="wobbleBottom">wobbleBottom</option>
+										<option value="wobbleSkew">wobbleSkew</option>
+									</optgroup>
+									<optgroup label="Buzz">
+										<option value="buzz">buzz</option>
+										<option value="buzzOut">buzzOut</option>
 									</optgroup>
 									<optgroup label="Flippers">
 										<option value="flip">flip</option>
@@ -101,6 +138,9 @@ $scroll_offset = get_option ( 'eds_scroll_offset', '75' );
 									</optgroup>
 									<optgroup label="Lightspeed">
 										<option value="lightSpeedIn">lightSpeedIn</option>
+									</optgroup>
+									<optgroup label="Twirl">
+										<option value="twirlIn">twirlIn</option>
 									</optgroup>
 									<optgroup label="Specials">
 										<option value="hinge">hinge</option>
@@ -243,13 +283,50 @@ $scroll_offset = get_option ( 'eds_scroll_offset', '75' );
 										<option value="spinner">Spin</option>
 										<option value="bounce">bounce</option>
 										<option value="flash">flash</option>
-										<option value="pulse">pulse</option>
 										<option value="rubberBand">rubberBand</option>
 										<option value="shake">shake</option>
 										<option value="swing">swing</option>
 										<option value="tada">tada</option>
 										<option value="wobble">wobble</option>
 										<option value="jello">jello</option>
+										<option value="wiggle">wiggle</option>
+										<option value="fade">fade</option>
+										<option value="appear">appear</option>
+										<option value="grow">grow</option>
+										<option value="shrink">shrink</option>
+										<option value="push">push</option>
+										<option value="pop">pop</option>
+										<option value="float">float</option>
+										<option value="sink">sink</option>
+										<option value="forward">forward</option>
+										<option value="backward">backward</option>
+									</optgroup>
+									<optgroup label="Pulse">
+										<option value="pulse">pulse</option>
+										<option value="pulseGrow">pulseGrow</option>
+										<option value="pulseShrink">pulseShrink</option>
+									</optgroup>
+									<optgroup label="Rotate">
+										<option value="rotate">rotate</option>
+										<option value="growRotate">growRotate</option>
+									</optgroup>
+									<optgroup label="Skew">
+										<option value="skew">skew</option>
+										<option value="skewForward">skewForward</option>
+										<option value="skewBackward">skewBackward</option>
+									</optgroup>
+									<optgroup label="Wobble">
+										<option value="wobbleHorizontal">wobbleHorizontal</option>
+										<option value="wobbleVertical">wobbleVertical</option>
+										<option value="wobbleToBottomRight">wobbleToBottomRight</option>
+										<option value="wobbleToTopRight">wobbleToTopRight</option>
+										<option value="wobbleTop">wobbleTop</option>
+										<option value="wobbleBottom">wobbleBottom</option>
+										<option value="wobbleSkew">wobbleSkew</option>
+									</optgroup>
+									<optgroup label="Buzz">
+										<option value="buzz">buzz</option>
+										<option value="buzzOut">buzzOut</option>
 									</optgroup>
 									<optgroup label="Flippers">
 										<option value="flip">flip</option>
@@ -258,6 +335,9 @@ $scroll_offset = get_option ( 'eds_scroll_offset', '75' );
 									</optgroup>
 									<optgroup label="Lightspeed">
 										<option value="lightSpeedOut">lightSpeedOut</option>
+									</optgroup>
+									<optgroup label="Twirl">
+										<option value="twirlOut">twirlOut</option>
 									</optgroup>
 									<optgroup label="Specials">
 										<option value="hinge">hinge</option>

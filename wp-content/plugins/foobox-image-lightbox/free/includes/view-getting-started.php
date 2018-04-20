@@ -93,17 +93,13 @@ $button_text = $show_trial_message ? __( 'Already convinced? Upgrade to PRO!', '
 			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'Social Sharing', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'Share content to your favourite social networks with ease.', 'foobox-image-lightbox' ); ?>
 			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'Look and feel', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'Default, Metro and Flat styles available. You can also change color schemes and icons.', 'foobox-image-lightbox' ); ?>
 			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'Fullscreen Mode', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'Use the browser\'s native fullscreen mode to showcase your media.', 'foobox-image-lightbox' ); ?>
-			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'Slideshow Mode', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'Turn your gallery into a media slideshow, with autoplay.', 'foobox-image-lightbox' ); ?>
+			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'Custom JS &amp; CSS', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'Power-users can add custom JS and CSS using our advanced settings.', 'foobox-image-lightbox' ); ?>
+			<p><span class="dashicons dashicons-yes"></span><strong><?php _e( 'PLUS tons more!', 'foobox-image-lightbox' ); ?></strong> - <?php _e( 'With 85+ settings available, you can customize FooBox to your heart\'s content.', 'foobox-image-lightbox' ); ?>
 
 			<?php if ( !foobox_hide_pricing_menu() ) { ?>
 			<h4><?php printf( '<a href="%s">%s</a>', esc_url ( foobox_pricing_url() ), $button_text ); ?></h4>
 			<?php } ?>
 
-			<h2><?php _e( 'Optimized Asset Loading', 'foobox-image-lightbox' ); ?></h2>
-			<p><?php _e( 'Do you watch what javascript or stylesheet files are loaded on your site? Choose to only load FooBox assets on certain pages, or all of them. Either opt-in or opt-out, you have the choice.', 'foobox-image-lightbox' ); ?></p>
-
-			<h2><?php _e( 'Advanced Settings', 'foobox-image-lightbox' ); ?></h2>
-			<p><?php _e( 'With 85+ settings available, you can customize FooBox to your heart\'s content. But if you are a power-user, you can add custom JS and CSS using our advanced settings.', 'foobox-image-lightbox' ); ?></p>
 		</div>
 	</div>
 	<div id="demo_tab" class="feature-section nav-container" style="display: none">

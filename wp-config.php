@@ -23,10 +23,10 @@
 define('DB_NAME', 'katycodeswp');
 
 /** MySQL database username */
-define('DB_USER', 'admin');
+define('DB_USER', 'katy');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'iLn7krYwvMQCBbtJ');
+define('DB_PASSWORD', '4WbQ4k79FJFski9U2z');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -87,3 +87,8 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('WP_HOME','http://localhost:8888/katycodes');
+define('WP_SITEURL','http://localhost:8888/katycodes');
+
+define('WP_MEMORY_LIMIT', '164MB');

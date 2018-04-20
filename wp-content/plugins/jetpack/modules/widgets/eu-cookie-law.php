@@ -94,7 +94,16 @@ if ( ! class_exists( 'Jetpack_EU_Cookie_Law_Widget' ) ) {
 		 */
 		function enqueue_frontend_scripts() {
 			wp_enqueue_style( 'eu-cookie-law-style', plugins_url( 'eu-cookie-law/style.css', __FILE__ ), array(), '20170403' );
-			wp_enqueue_script( 'eu-cookie-law-script', plugins_url( 'eu-cookie-law/eu-cookie-law.js', __FILE__ ), array( 'jquery' ), '20170404', true );
+			wp_enqueue_script(
+				'eu-cookie-law-script',
+				Jetpack::get_file_url_for_environment(
+					'_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js',
+					'modules/widgets/eu-cookie-law/eu-cookie-law.js'
+				),
+				array( 'jquery' ),
+				'20170404',
+				true
+			);
 		}
 
 		/**
@@ -172,15 +181,24 @@ if ( ! class_exists( 'Jetpack_EU_Cookie_Law_Widget' ) ) {
 				$instance['text'] = $this->text_options[0];
 			}
 
-			if ( isset( $new_instance['custom-policy-url'] ) ) {
+			if ( isset( $new_instance['policy-url'] ) ) {
+				$instance['policy-url'] = 'custom' === $new_instance['policy-url']
+					? 'custom'
+					: 'default';
+			} else {
+				$instance['policy-url'] = $this->policy_url_options[0];
+			}
+
+			if ( 'custom' === $instance['policy-url'] && isset( $new_instance['custom-policy-url'] ) ) {
 				$instance['custom-policy-url'] = esc_url( $new_instance['custom-policy-url'], array( 'http', 'https' ) );
 
 				if ( strlen( $instance['custom-policy-url'] ) < 10 ) {
 					unset( $instance['custom-policy-url'] );
-					$instance['policy-url'] = $this->policy_url_options[0];
+					global $wp_customize;
+					if ( ! isset( $wp_customize ) ) {
+						$instance['policy-url'] = $this->policy_url_options[0];
+					}
 				}
-			} else {
-				$instance['policy-url'] = $this->policy_url_options[0];
 			}
 
 			if ( isset( $new_instance['policy-link-text'] ) ) {
@@ -206,24 +224,6 @@ if ( ! class_exists( 'Jetpack_EU_Cookie_Law_Widget' ) ) {
 		}
 
 		/**
-		 * Set the EU Cookie Law cookie.
-		 */
-		public static function add_consent_cookie() {
-			if ( ! isset( $_POST['eucookielaw'] ) || 'accept' !== $_POST['eucookielaw'] ) {
-				return;
-			}
-
-			if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'eucookielaw' ) ) {
-				return;
-			}
-
-			// Cookie is valid for 30 days, so the user will be shown the banner again after 30 days.
-			setcookie( self::$cookie_name, current_time( 'timestamp' ), time() + self::$cookie_validity, '/' );
-
-			wp_safe_redirect( $_POST['redirect_url'] );
-		}
-
-		/**
 		 * Check if the value is allowed and not empty.
 		 *
 		 * @param  string $value Value to check.
@@ -245,9 +245,5 @@ if ( ! class_exists( 'Jetpack_EU_Cookie_Law_Widget' ) ) {
 		register_widget( 'Jetpack_EU_Cookie_Law_Widget' );
 	};
 
-  // Only load the widget if we're inside the admin or the user has not given their consent to accept cookies.
-	if ( is_admin() || empty( $_COOKIE[ Jetpack_EU_Cookie_Law_Widget::$cookie_name ] ) ) {
-		add_action( 'widgets_init', 'jetpack_register_eu_cookie_law_widget' );
-		add_action( 'init', array( 'Jetpack_EU_Cookie_Law_Widget', 'add_consent_cookie' ) );
-	}
+	add_action( 'widgets_init', 'jetpack_register_eu_cookie_law_widget' );
 }

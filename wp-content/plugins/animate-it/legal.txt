@@ -11,3 +11,4 @@ http://benalman.com/code/projects/jquery-throttle-debounce/docs/files/jquery-ba-
 
 CSS
 http://daneden.github.io/animate.css/
+http://ianlunn.github.io/Hover/

@@ -5,7 +5,7 @@
  * Domain Path: /lang
  * Plugin URI: http://www.eleopard.in
  * Description: Add cool CSS3 animations to your content.
- * Version: 2.1.8
+ * Version: 2.3.1
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -42,7 +42,7 @@ class EDS_Animate {
                     	"rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft",
                     	"rotateInUpRight","slideInUp","slideInDown","slideInLeft","slideInRight",
                     	"zoomIn","zoomInDown","zoomInLeft","zoomInRight","zoomInUp","flipInX",
-                    	"flipInY","lightSpeedIn","rollIn");
+                    	"flipInY","lightSpeedIn","rollIn","twirlIn");
 						
 	public function __construct( $file_loc ) {	
 		
@@ -157,6 +157,13 @@ class EDS_Animate {
 	
 			if( $installed_version != $eds_animate_it_version ) {
 				/* Code Block to be used for next plugin upgrade */
+			    /*For version 2.3.0 code to add custom css file is added.*/
+			    $custom_css = get_option('eds_custom_css');
+			    if($custom_css !== false && $custom_css != "" ){
+                    file_put_contents( plugin_dir_path( self::$abs_file ) . "assets/css/custom.css", $custom_css);
+			    }			    
+			    update_option( 'eds_animate_it_version', $eds_animate_it_version );
+			    
 			}
 		}
 	
@@ -186,8 +193,9 @@ class EDS_Animate {
 			update_option('eds_enable_on_tab', $_REQUEST['eds_enable_on_tab']);
 			$ok=true;	
 		}
-		update_option('eds_custom_css', esc_textarea(isset($_REQUEST['eds_custom_css'])?$_REQUEST['eds_custom_css']:''));
-		
+		$custom_css =  esc_textarea(isset($_REQUEST['eds_custom_css'])?$_REQUEST['eds_custom_css']:'');
+		update_option('eds_custom_css', $custom_css);
+		file_put_contents( plugin_dir_path( self::$abs_file ) . "assets/css/custom.css", $custom_css);		
 			
 		if($ok){?>
 			<div id="message" class="updated fade">
@@ -282,8 +290,7 @@ class EDS_Animate {
 		<?php	
 	}
 	
-	function detect_device()
-	{
+	function detect_device() {
 		static $device_type = null;
 		
 		if(!$device_type)
@@ -296,23 +303,21 @@ class EDS_Animate {
 	}	
 		
 	function add_eds_script_and_css() {
-		
+	    //Custom CSS//
+	    $custom_css = get_option('eds_custom_css');
+	    
 		$device_type = $this->detect_device();
 	
 		$enable_smart_phone = get_option('eds_enable_on_phone');
-		$enable_tablet =  get_option('eds_enable_on_tab');
-	
+		$enable_tablet =  get_option('eds_enable_on_tab');	
 	
 		$enable= ($device_type=='phone' && intval($enable_smart_phone))
 		|| ($device_type =='tablet' && intval($enable_tablet))
 		|| ($device_type =='computer');
 	
-		if($enable):
+		if($enable) {
 		
-			wp_register_style( 'edsanimate-animo-css',plugins_url( '/assets/css/animate-animo.css', self::$abs_file ));
-	
-			//Custom CSS//
-			$custom_css = get_option('eds_custom_css');
+			wp_register_style( 'edsanimate-animo-css',plugins_url( '/assets/css/animate-animo.css', self::$abs_file ));			
 		
 			wp_register_script( 'edsanimate-animo-script',plugins_url( '/assets/js/animo.min.js', self::$abs_file ), array('jquery'), '1.0.3', true);
 			
@@ -334,16 +339,28 @@ class EDS_Animate {
 		
 			//Enqueuing style sheets
 			wp_enqueue_style( 'edsanimate-animo-css' );
-			wp_add_inline_style( 'edsanimate-animo-css', $custom_css );
+			wp_add_inline_style( 'edsanimate-animo-css', $custom_css );		
 				
 			//Enqueuing javascripts
 			wp_enqueue_script( 'edsanimate-animo-script');
 			wp_enqueue_script( 'edsanimate-throttle-debounce-script' );
 			wp_enqueue_script( 'viewportcheck-script');
 			wp_enqueue_script( 'edsanimate-script');
-			wp_enqueue_script( 'edsanimate-site-script');
+			wp_enqueue_script( 'edsanimate-site-script');		
+		} else {		    
+		    if( file_exists( plugin_dir_path( self::$abs_file ) . "assets/css/custom.css" ) ) {
+        		    wp_register_style( 'edsanimate-custom-css',plugins_url( '/assets/css/custom.css', self::$abs_file ));
+        		    wp_enqueue_style( 'edsanimate-custom-css' );		        
+        		} else {
+        		    if( $custom_css != null && trim($custom_css) != "" ) {
+            		    wp_register_style( 'edsanimate-blank-css',plugins_url( '/assets/css/blank.css', self::$abs_file ) );
+            		    wp_enqueue_style( 'edsanimate-blank-css' );
+            		    wp_add_inline_style( 'edsanimate-blank-css', $custom_css );
+        		    }
+        		}
+		}	
 		
-		endif;
+		
 	}	
 	
 	function edsanimate_handler( $attributes, $content = null ) {
@@ -518,6 +535,6 @@ if( !defined( 'WPINC' ) ) {
 
 global $eds_animate_it_version;
 
-$eds_animate_it_version = '2.1.0';
+$eds_animate_it_version = '2.3.0';
 
 new EDS_Animate( __FILE__ );

@@ -70,6 +70,9 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 			} else {
 				$extension_url = FOOGALLERY_EXTENSIONS_ENDPOINT;
 			}
+			//make sure we always get the latest version!
+			$extension_url .= '?v=' . wp_generate_password();
+
 			return apply_filters('foogallery_extension_api_endpoint', $extension_url );
 		}
 
@@ -131,21 +134,6 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 		 */
 		private function default_extenions_in_case_of_emergency() {
 			$extensions = array();
-
-			//Our default gallery templates
-			$extensions[] = array(
-				'slug'        => 'default_templates',
-				'class'       => 'FooGallery_Default_Templates_Extension',
-				'categories'  => array( 'Featured', 'Free', ),
-				'title'       => 'Default Templates',
-				'description' => 'The bundled gallery templates.',
-				'author'      => 'FooPlugins',
-				'author_url'  => 'http://fooplugins.com',
-				'thumbnail'   => '/assets/extension_bg.png',
-				'tags'        => array( 'template', ),
-				'source'      => 'bundled',
-				'activated_by_default' => true,
-			);
 
 			$extensions[] =	array(
 				'slug' => 'albums',
@@ -309,9 +297,19 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 		function get_all_for_view() {
 			$all_extensions = $this->get_all();
 			$extensions = array();
+			$active_extensions = array();
 
 			//add all extensions to an array using the slug as the array key
-			foreach ( $all_extensions as $extension ) {
+			foreach ( $all_extensions as &$extension ) {
+				$active = $this->is_active( $extension['slug'], true );
+				$extension['downloaded'] = $active || $this->is_downloaded( $extension );
+				$extension['is_active'] = $active;
+				$extension['has_errors'] = $this->has_errors( $extension['slug'] );
+
+				//build up a list of active extensions
+				if ( $active ) {
+					$active_extensions[$extension['slug']] = $extension;
+				}
 
 				//remove any bundled extensions that are activated_by_default = true
 				if ( isset( $extension['activated_by_default'] ) &&
@@ -325,20 +323,13 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 			}
 
 			//loop through all active extensions and remove any other extensions if required based on the 'remove_if_active' property
-			$active_extensions = $this->get_active_extensions();
+			foreach ( $active_extensions as $active_extension_slug => $active_extension ) {
+				//check if we need to remove any other extensions from the list
+				if ( isset( $active_extension['remove_if_active'] ) ) {
 
-			foreach ( $active_extensions as $active_extension => $active_extension_class ) {
-				if ( array_key_exists( $active_extension, $extensions ) ) {
-					$extension = $extensions[$active_extension];
-
-					//check if we need to remove any other extensions from the list
-					if ( isset( $extension['remove_if_active'] ) ) {
-
-						foreach ( $extension['remove_if_active'] as $extension_slug_to_remove ) {
-
-							if ( array_key_exists( $extension_slug_to_remove, $extensions ) ) {
-								unset( $extensions[ $extension_slug_to_remove ] );
-							}
+					foreach ( $active_extension['remove_if_active'] as $extension_slug_to_remove ) {
+						if ( array_key_exists( $extension_slug_to_remove, $extensions ) ) {
+							unset( $extensions[ $extension_slug_to_remove ] );
 						}
 					}
 				}
@@ -430,20 +421,47 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 		 *
 		 * @return bool
 		 */
-		public function is_active( $slug ) {
-			global $foogallery_extensions;
+		public function is_active( $slug, $perform_active_check = false ) {
+			$active_extensions = $this->get_active_extensions();
+			if ( array_key_exists( $slug, $active_extensions ) ) {
+				//it has been previously activated through the extensions page
+				return true;
+			}
 
-			//first check if the extension class was loaded into memory
-			if ( $foogallery_extensions ) {
-				if ( array_key_exists( $slug, $foogallery_extensions ) ) {
-					return true;
+			if ( $perform_active_check ) {
+				$extension = $this->get_extension( $slug );
+
+				//if we have an 'plugin_active_class' attribute and that class exists, it means our plugin must be active
+				if ( isset( $extension['plugin_active_class'] ) ) {
+					if ( class_exists( $extension['plugin_active_class'] ) ) {
+						return true;
+					}
+				}
+
+				//if we cannot find the extension class in memory, then check to see if the extension plugin is activated
+				if ( isset( $extension['perform_plugin_active_check'] ) && true === $extension['perform_plugin_active_check'] &&
+					isset( $extension['file'] ) ) {
+					$plugin = $this->find_active_wordpress_plugin( $extension );
+
+					return $plugin !== false;
 				}
 			}
 
-			//if we cannot find the extension class in memory, then check to see if the extension plugin is activated
-			$extension = $this->get_extension( $slug );
-			$plugin = $this->find_wordpress_plugin( $extension );
-			return $plugin && $plugin['active'];
+			return false;
+
+//			global $foogallery_extensions;
+//
+//			//first check if the extension class was loaded into memory
+//			if ( $foogallery_extensions ) {
+//				if ( array_key_exists( $slug, $foogallery_extensions ) ) {
+//					return true;
+//				}
+//			}
+//
+//			//if we cannot find the extension class in memory, then check to see if the extension plugin is activated
+//			$extension = $this->get_extension( $slug );
+//			$plugin = $this->find_active_wordpress_plugin( $extension );
+//			return $plugin;
 		}
 
 		/**
@@ -651,6 +669,25 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 
 		/**
 		 * @TODO
+		 * @param boolean $extension
+		 *
+		 * @return array|bool
+		 */
+		private function find_active_wordpress_plugin( $extension ) {
+			$plugins = get_plugins();
+			foreach ( $plugins as $plugin_file => $plugin ) {
+				if ( is_plugin_active( $plugin_file ) && isset($extension['file']) && foo_ends_with( $plugin_file, $extension['file'] ) ) {
+					return array(
+						'file' => $plugin_file,
+						'plugin' => $plugin
+					);
+				}
+			}
+			return false;
+		}
+
+		/**
+		 * @TODO
 		 * @param $slug
 		 *
 		 * @return array|mixed|void
@@ -732,6 +769,7 @@ if ( ! class_exists( 'FooGallery_Extensions_API' ) ) {
 		 * @return mixed|void
 		 */
 		public function get_active_extensions() {
+			//should we not rather get back all plugins that are active?
 			return get_option( FOOGALLERY_EXTENSIONS_ACTIVATED_OPTIONS_KEY, array() );
 		}
 

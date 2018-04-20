@@ -16,12 +16,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	overflow: hidden;	
 }
 
-.eds-scroll-hidden, .edsanimate-sis-hidden {
-	opacity:0;
+.edsanimate-sis-hidden, .eds-scroll-hidden {
+	opacity:0;	
 }
 
 .eds-scroll-visible {
-	opacity:1;
+	opacity:1;	
 }
 
 .animated {
@@ -29,6 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 1s;
         -ms-animation-duration: 1s;
           -o-animation-duration: 1s;
+       	     animation-duration: 1s;
 }
 
 /*Delay classes*/
@@ -37,6 +38,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: .5s;
         -ms-animation-delay: .5s;
           -o-animation-delay: .5s;
+             animation-delay: .5s;
 }
 
 .delay2 {
@@ -44,6 +46,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 1s;
         -ms-animation-delay: 1s;
           -o-animation-delay: 1s;
+             animation-delay: 1s;
 }
 
 .delay3 {
@@ -51,6 +54,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 1.5s;
         -ms-animation-delay: 1.5s;
           -o-animation-delay: 1.5s;
+             animation-delay: 1.5s;
 }
 
 .delay4 {
@@ -58,6 +62,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 2s;
         -ms-animation-delay: 2s;
           -o-animation-delay: 2s;
+             animation-delay: 2s;
 }
 
 .delay5 {
@@ -65,6 +70,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 2.5s;
         -ms-animation-delay: 2.5s;
           -o-animation-delay: 2.5s;
+             animation-delay: 2.5s;
 }
 
 .delay6 {
@@ -72,6 +78,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 3s;
         -ms-animation-delay: 3s;
           -o-animation-delay: 3s;
+             animation-delay: 3s;
 }
 
 .delay7 {
@@ -79,6 +86,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 3.5s;
         -ms-animation-delay: 3.5s;
           -o-animation-delay: 3.5s;
+             animation-delay: 3.5s;
 }
 
 .delay8 {
@@ -86,6 +94,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 4s;
         -ms-animation-delay: 4s;
           -o-animation-delay: 4s;
+             animation-delay: 4s;
 }
 
 .delay9 {
@@ -93,6 +102,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 4.5s;
         -ms-animation-delay: 4.5s;
           -o-animation-delay: 4.5s;
+             animation-delay: 4.5s;
 }
 
 .delay10 {
@@ -100,6 +110,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 5s;
         -ms-animation-delay: 5s;
           -o-animation-delay: 5s;
+             animation-delay: 5s;
 }
 
 .delay11 {
@@ -107,6 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 5.5s;
         -ms-animation-delay: 5.5s;
           -o-animation-delay: 5.5s;
+             animation-delay: 5.5s;
 }
 
 .delay12 {
@@ -114,6 +126,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-delay: 6s;
         -ms-animation-delay: 6s;
           -o-animation-delay: 6s;
+             animation-delay: 6s;
 }
 
 /*Duration Classes*/
@@ -122,6 +135,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: .5s !important;
         -ms-animation-duration: .5s !important;
           -o-animation-duration: .5s !important;
+       	     animation-duration: .5s !important;
 }
 
 .duration2 {
@@ -129,6 +143,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 1s !important;
         -ms-animation-duration: 1s !important;
           -o-animation-duration: 1s !important;
+       	     animation-duration: 1s !important;
 }
 
 .duration3 {
@@ -136,6 +151,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 1.5s !important;
         -ms-animation-duration: 1.5s !important;
           -o-animation-duration: 1.5s !important;
+       	     animation-duration: 1.5s !important;
 }
 
 .duration4 {
@@ -143,6 +159,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 2s !important;
         -ms-animation-duration: 2s !important;
           -o-animation-duration: 2s !important;
+       	     animation-duration: 2s !important;
 }
 
 .duration5 {
@@ -150,6 +167,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 2.5s !important;
         -ms-animation-duration: 2.5s !important;
           -o-animation-duration: 2.5s !important;
+       	     animation-duration: 2.5s !important;
 }
 
 .duration6 {
@@ -157,6 +175,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 3s !important;
         -ms-animation-duration: 3s !important;
           -o-animation-duration: 3s !important;
+       	     animation-duration: 3s !important;
 }
 
 .duration7 {
@@ -164,6 +183,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 3.5s !important;
         -ms-animation-duration: 3.5s !important;
           -o-animation-duration: 3.5s !important;
+       	     animation-duration: 3.5s !important;
 }
 
 .duration8 {
@@ -171,6 +191,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 4s !important;
         -ms-animation-duration: 4s !important;
           -o-animation-duration: 4s !important;
+       	     animation-duration: 4s !important;
 }
 
 .duration9 {
@@ -178,6 +199,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 4.5s !important;
         -ms-animation-duration: 4.5s !important;
           -o-animation-duration: 4.5s !important;
+       	     animation-duration: 4.5s !important;
 }
 
 .duration10 {
@@ -185,6 +207,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 5s !important;
         -ms-animation-duration: 5s !important;
           -o-animation-duration: 5s !important;
+       	     animation-duration: 5s !important;
 }
 
 .duration11 {
@@ -192,6 +215,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 5.5s !important;
         -ms-animation-duration: 5.5s !important;
           -o-animation-duration: 5.5s !important;
+       	     animation-duration: 5.5s !important;
 }
 
 .duration12 {
@@ -199,6 +223,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 6s !important;
         -ms-animation-duration: 6s !important;
           -o-animation-duration: 6s !important;
+       	     animation-duration: 6s !important;
 }
 
 .duration13 {
@@ -206,6 +231,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 6.5s !important;
         -ms-animation-duration: 6.5s !important;
           -o-animation-duration: 6.5s !important;
+       	     animation-duration: 6.5s !important;
 }
 
 .duration14 {
@@ -213,6 +239,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 7s !important;
         -ms-animation-duration: 7s !important;
           -o-animation-duration: 7s !important;
+       	     animation-duration: 7s !important;
 }
 
 .duration15 {
@@ -220,6 +247,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 7.5s !important;
         -ms-animation-duration: 7.5s !important;
           -o-animation-duration: 7.5s !important;
+       	     animation-duration: 7.5s !important;
 }
 
 .duration16 {
@@ -227,6 +255,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 8s !important;
         -ms-animation-duration: 8s !important;
           -o-animation-duration: 8s !important;
+       	     animation-duration: 8s !important;
 }
 
 .duration17 {
@@ -234,6 +263,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 8.5s !important;
         -ms-animation-duration: 8.5s !important;
           -o-animation-duration: 8.5s !important;
+       	     animation-duration: 8.5s !important;
 }
 
 .duration18 {
@@ -241,6 +271,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 9s !important;
         -ms-animation-duration: 9s !important;
           -o-animation-duration: 9s !important;
+       	     animation-duration: 9s !important;
 }
 
 .duration19 {
@@ -248,6 +279,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 9.5s !important;
         -ms-animation-duration: 9.5s !important;
           -o-animation-duration: 9.5s !important;
+       	     animation-duration: 9.5s !important;
 }
 
 .duration20 {
@@ -255,6 +287,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -moz-animation-duration: 10s !important;
         -ms-animation-duration: 10s !important;
           -o-animation-duration: 10s !important;
+       	     animation-duration: 10s !important;
 }
 
 .animated {
@@ -265,25 +298,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	-webkit-backface-visibility: hidden;
 
 	animation-fill-mode: both;
-	transform: translate3d(0, 0, 0);
-	perspective: 1000;
+	transform: translate3d(0, 0, 0);	
 
 	-o-animation-fill-mode: both;
-	-o-transform: translate3d(0, 0, 0);
-	-o-perspective: 1000;
+	-o-transform: translate3d(0, 0, 0);	
 
 	-moz-animation-fill-mode: both;
 	-moz-transform: translate3d(0, 0, 0);
-	-moz-perspective: 1000;
-
+	
 	-webkit-animation-fill-mode: both;
 	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-perspective: 1000;
 }
 
 .animated.infinite {
- -webkit-animation-iteration-count: infinite;
- animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes flash {
@@ -4205,13 +4237,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-timing-function: ease-out;
 }
 
-.animated.lightSpeedIn {
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-
 /* originally authored by Angelo Rohit - https://github.com/angelorohit */
 
 @-webkit-keyframes lightSpeedOut {
@@ -4244,13 +4269,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -moz-animation-timing-function: ease-in;
     -o-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-}
-
-.animated.lightSpeedOut {
-    -webkit-animation-duration: 0.25s;
-    -moz-animation-duration: 0.25s;
-    -o-animation-duration: 0.25s;
-    animation-duration: 0.25s;
 }
 
 /* originally authored by Angelo Rohit - https://github.com/angelorohit */
@@ -4321,13 +4339,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -moz-animation-timing-function: ease-in;
     -o-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-}
-
-.animated.wiggle {
-    -webkit-animation-duration: 0.75s;
-    -moz-animation-duration: 0.75s;
-    -o-animation-duration: 0.75s;
-    animation-duration: 0.75s;
 }
 
 
@@ -4479,4 +4490,789 @@ Daniel Raftery <@ThirvingKings>
  -webkit-animation-play-state: paused; 
    animation-play-state: paused;
 }
-   
+
+/* originally authored by Ian Lunn - https://github.com/IanLunn */
+
+/* Grow */
+@-webkit-keyframes grow {
+  100% { -webkit-transform: scale(1.1);  }
+}
+
+@-moz-keyframes grow {
+  100% { -moz-transform: scale(1.1);  }
+}
+
+@-o-keyframes grow { 
+  100% { -o-transform: scale(1.1);  }
+}
+
+@keyframes grow { 
+  100% { transform: scale(1.1);  }
+}
+
+.animated.grow {
+  -webkit-animation-name: grow;
+  -moz-animation-name: grow;
+  -o-animation-name: grow;
+  animation-name: grow;
+}
+
+/* Shrink */
+@-webkit-keyframes shrink {
+  100% { -webkit-transform: scale(0.9);  }
+}
+
+@-moz-keyframes shrink {
+  100% { -moz-transform: scale(0.9);  }
+}
+
+@-o-keyframes shrink { 
+  100% { -o-transform: scale(0.9);  }
+}
+
+@keyframes shrink { 
+  100% { transform: scale(0.9);  }
+}
+
+.animated.shrink {
+  -webkit-animation-name: shrink;
+  -moz-animation-name: shrink;
+  -o-animation-name: shrink;
+  animation-name: shrink;
+}
+
+/* Pulse Grow */
+@-webkit-keyframes pulseGrow {
+  0% { -webkit-transform: scale(1.1); }
+}
+
+@-moz-keyframes pulseGrow {
+  0% { -moz-transform: scale(1.1); }
+}
+
+@-o-keyframes pulseGrow {
+  0% { -o-transform: scale(1.1); }
+}
+
+@keyframes pulseGrow {
+  0% { transform: scale(1.1); }
+}
+
+.animated.pulseGrow {
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-name: pulseGrow;
+  -moz-animation-name: pulseGrow;
+  -o-animation-name: pulseGrow;
+  animation-name: pulseGrow;
+}
+
+/* Pulse Shrink */
+@-webkit-keyframes pulseShrink {
+  0% { -webkit-transform: scale(0.9); }
+}
+
+@-moz-keyframes pulseShrink {
+  0% { -moz-transform: scale(0.9); }
+}
+
+@-o-keyframes pulseShrink {
+  0% { -o-transform: scale(0.9); }
+}
+
+@keyframes pulseShrink {
+  0% { transform: scale(0.9); }
+}
+
+.animated.pulseShrink {
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-name: pulseShrink;
+  -moz-animation-name: pulseShrink;
+  -o-animation-name: pulseShrink;
+  animation-name: pulseShrink;
+}
+
+/* Push */
+@-webkit-keyframes push {
+  50% { -webkit-transform: scale(0.8); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes push {
+  50% { -moz-transform: scale(0.8); }
+  100% { -moz-transform: scale(1); }
+}
+
+@-o-keyframes push {
+  50% { -o-transform: scale(0.8); }
+  100% { -o-transform: scale(1); }
+}
+
+@keyframes push {
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+.animated.push {
+  -webkit-animation-name: push;
+  -moz-animation-name: push;
+  -o-animation-name: push;
+  animation-name: push;
+}
+
+/* Pop */
+@-webkit-keyframes pop {
+  50% { -webkit-transform: scale(1.2); }
+}
+
+@-moz-keyframes pop {
+  50% { -moz-transform: scale(1.2); }
+}
+
+@-o-keyframes pop {
+  50% { -o-transform: scale(1.2); }
+}
+
+@keyframes pop {
+  50% { transform: scale(1.2); }
+}
+
+.animated.pop {
+  -webkit-animation-name: pop;
+  -moz-animation-name: pop;
+  -o-animation-name: pop;
+  animation-name: pop;
+}
+
+/* Rotate */
+@-webkit-keyframes rotate {
+  100% { -webkit-transform: rotate(60deg);  }
+}
+
+@-moz-keyframes rotate {
+  100% { -moz-transform: rotate(60deg);  }
+}
+
+@-o-keyframes rotate { 
+  100% { -o-transform: rotate(60deg);  }
+}
+
+@keyframes rotate { 
+  100% { transform: rotate(60deg);  }
+}
+
+.animated.rotate {
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+}
+
+/* Grow Rotate */
+@-webkit-keyframes growRotate {
+  100% { -webkit-transform: scale(1.1) rotate(60deg);  }
+}
+
+@-moz-keyframes growRotate {
+  100% { -moz-transform: scale(1.1) rotate(60deg);  }
+}
+
+@-o-keyframes growRotate { 
+  100% { -o-transform: scale(1.1) rotate(60deg);  }
+}
+
+@keyframes growRotate { 
+  100% { transform: scale(1.1) rotate(60deg);  }
+}
+
+.animated.growRotate {
+  -webkit-animation-name: growRotate;
+  -moz-animation-name: growRotate;
+  -o-animation-name: growRotate;
+  animation-name: growRotate;
+}
+
+/* Float */
+@-webkit-keyframes float {
+  100% { -webkit-transform: translateY(-8px);  }
+}
+
+@-moz-keyframes float {
+  100% { -moz-transform: translateY(-8px);  }
+}
+
+@-o-keyframes float { 
+  100% { -o-transform: translateY(-8px);  }
+}
+
+@keyframes float { 
+  100% { transform: translateY(-8px);  }
+}
+
+.animated.float {
+  -webkit-animation-name: float;
+  -moz-animation-name: float;
+  -o-animation-name: float;
+  animation-name: float;
+}
+
+/* Sink */
+@-webkit-keyframes sink {
+  100% { -webkit-transform: translateY(8px);  }
+}
+
+@-moz-keyframes sink {
+  100% { -moz-transform: translateY(8px);  }
+}
+
+@-o-keyframes sink { 
+  100% { -o-transform: translateY(8px);  }
+}
+
+@keyframes sink { 
+  100% { transform: translateY(8px);  }
+}
+
+.animated.sink {
+  -webkit-animation-name: sink;
+  -moz-animation-name: sink;
+  -o-animation-name: sink;
+  animation-name: sink;
+}
+
+/* Skew */
+@-webkit-keyframes skew {
+  100% { -webkit-transform: skew(-10deg);  }
+}
+
+@-moz-keyframes skew {
+  100% { -moz-transform: skew(-10deg);  }
+}
+
+@-o-keyframes skew { 
+  100% { -o-transform: skew(-10deg);  }
+}
+
+@keyframes skew { 
+  100% { transform: skew(-10deg);  }
+}
+
+.animated.skew {
+  -webkit-animation-name: skew;
+  -moz-animation-name: skew;
+  -o-animation-name: skew;
+  animation-name: skew;
+}
+
+/* Skew Forward */
+@-webkit-keyframes skewForward {
+  100% { -webkit-transform: skew(-10deg);  }
+}
+
+@-moz-keyframes skewForward {
+  100% { -moz-transform: skew(-10deg);  }
+}
+
+@-o-keyframes skewForward { 
+  100% { -o-transform: skew(-10deg);  }
+}
+
+@keyframes skewForward { 
+  100% { transform: skew(-10deg);  }
+}
+
+.animated.skewForward {
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-animation-name: skewForward;
+  -moz-animation-name: skewForward;
+  -o-animation-name: skewForward;
+  animation-name: skewForward;
+}
+
+/* Skew Backward */
+@-webkit-keyframes skewBackward {
+  100% { -webkit-transform: skew(10deg);  }
+}
+
+@-moz-keyframes skewBackward {
+  100% { -moz-transform: skew(10deg);  }
+}
+
+@-o-keyframes skewBackward { 
+  100% { -o-transform: skew(10deg);  }
+}
+
+@keyframes skewBackward { 
+  100% { transform: skew(10deg);  }
+}
+
+.animated.skewBackward {
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-animation-name: skewBackward;
+  -moz-animation-name: skewBackward;
+  -o-animation-name: skewBackward;
+  animation-name: skewBackward;
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes wobbleVertical {
+  16.65% { -webkit-transform: translateY(8px); }
+  33.3% { -webkit-transform: translateY(-6px); }
+  49.95% { -webkit-transform: translateY(4px); }
+  66.6% { -webkit-transform: translateY(-2px); }
+  83.25% { -webkit-transform: translateY(1px); }
+  100% { -webkit-transform: translateY(0); }
+}
+
+@-moz-keyframes wobbleVertical {
+  16.65% { -moz-transform: translateY(8px); }
+  33.3% { -moz-transform: translateY(-6px); }
+  49.95% { -moz-transform: translateY(4px); }
+  66.6% { -moz-transform: translateY(-2px); }
+  83.25% { -moz-transform: translateY(1px); }
+  100% { -moz-transform: translateY(0); }
+}
+
+@-o-keyframes wobbleVertical {
+  16.65% { -o-transform: translateY(8px); }
+  33.3% { -o-transform: translateY(-6px); }
+  49.95% { -o-transform: translateY(4px); }
+  66.6% { -o-transform: translateY(-2px); }
+  83.25% { -o-transform: translateY(1px); }
+  100% { -o-transform: translateY(0); }
+}
+
+@keyframes wobbleVertical {
+  16.65% { transform: translateY(8px); }
+  33.3% { transform: translateY(-6px); }
+  49.95% { transform: translateY(4px); }
+  66.6% { transform: translateY(-2px); }
+  83.25% { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+.animated.wobbleVertical {
+  -webkit-animation-name: wobbleVertical;
+  -moz-animation-name: wobbleVertical;
+  -o-animation-name: wobbleVertical;
+  animation-name: wobbleVertical;
+}
+
+/* Wobble Horizontal */
+@-webkit-keyframes wobbleHorizontal {
+  16.65% { -webkit-transform: translateX(8px); }
+  33.3% { -webkit-transform: translateX(-6px); }
+  49.95% { -webkit-transform: translateX(4px); }
+  66.6% { -webkit-transform: translateX(-2px); }
+  83.25% { -webkit-transform: translateX(1px); }
+  100% { -webkit-transform: translateX(0); }
+}
+
+@-moz-keyframes wobbleHorizontal {
+  16.65% { -moz-transform: translateX(8px); }
+  33.3% { -moz-transform: translateX(-6px); }
+  49.95% { -moz-transform: translateX(4px); }
+  66.6% { -moz-transform: translateX(-2px); }
+  83.25% { -moz-transform: translateX(1px); }
+  100% { -moz-transform: translateX(0); }
+}
+
+@-o-keyframes wobbleHorizontal {
+  16.65% { -o-transform: translateX(8px); }
+  33.3% { -o-transform: translateX(-6px); }
+  49.95% { -o-transform: translateX(4px); }
+  66.6% { -o-transform: translateX(-2px); }
+  83.25% { -o-transform: translateX(1px); }
+  100% { -o-transform: translateX(0); }
+}
+
+@keyframes wobbleHorizontal {
+  16.65% { transform: translateX(8px); }
+  33.3% { transform: translateX(-6px); }
+  49.95% { transform: translateX(4px); }
+  66.6% { transform: translateX(-2px); }
+  83.25% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+.animated.wobbleHorizontal {
+  -webkit-animation-name: wobbleHorizontal;
+  -moz-animation-name: wobbleHorizontal;
+  -o-animation-name: wobbleHorizontal;
+  animation-name: wobbleHorizontal;
+}
+
+/* Wobble To Bottom Right */
+@-webkit-keyframes wobbleToBottomRight {
+  16.65% { -webkit-transform: translate(8px, 8px); }
+  33.3% { -webkit-transform: translate(-6px, -6px); }
+  49.95% { -webkit-transform: translate(4px, 4px); }
+  66.6% { -webkit-transform: translate(-2px, -2px); }
+  83.25% { -webkit-transform: translate(1px, 1px); }
+  100% { -webkit-transform: translate(0, 0); }
+}
+
+@-moz-keyframes wobbleToBottomRight {
+  16.65% { -moz-transform: translate(8px, 8px); }
+  33.3% { -moz-transform: translate(-6px, -6px); }
+  49.95% { -moz-transform: translate(4px, 4px); }
+  66.6% { -moz-transform: translate(-2px, -2px); }
+  83.25% { -moz-transform: translate(1px, 1px); }
+  100% { -moz-transform: translate(0, 0); }
+}
+
+@-o-keyframes wobbleToBottomRight {
+  16.65% { -o-transform: translate(8px, 8px); }
+  33.3% { -o-transform: translate(-6px, -6px); }
+  49.95% { -o-transform: translate(4px, 4px); }
+  66.6% { -o-transform: translate(-2px, -2px); }
+  83.25% { -o-transform: translate(1px, 1px); }
+  100% { -o-transform: translate(0, 0); }
+}
+
+@keyframes wobbleToBottomRight {
+  16.65% { transform: translate(8px, 8px); }
+  33.3% { transform: translate(-6px, -6px); }
+  49.95% { transform: translate(4px, 4px); }
+  66.6% { transform: translate(-2px, -2px); }
+  83.25% { transform: translate(1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animated.wobbleToBottomRight {
+  -webkit-animation-name: wobbleToBottomRight;
+  -moz-animation-name: wobbleToBottomRight;
+  -o-animation-name: wobbleToBottomRight;
+  animation-name: wobbleToBottomRight;
+}
+
+/* Wobble To Top Right */
+@-webkit-keyframes wobbleToTopRight {
+  16.65% { -webkit-transform: translate(8px, -8px); }
+  33.3% { -webkit-transform: translate(-6px, 6px); }
+  49.95% { -webkit-transform: translate(4px, -4px); }
+  66.6% { -webkit-transform: translate(-2px, 2px); }
+  83.25% { -webkit-transform: translate(1px, -1px); }
+  100% { -webkit-transform: translate(0, 0); }
+}
+
+@-moz-keyframes wobbleToTopRight {
+  16.65% { -moz-transform: translate(8px, -8px); }
+  33.3% { -moz-transform: translate(-6px, 6px); }
+  49.95% { -moz-transform: translate(4px, -4px); }
+  66.6% { -moz-transform: translate(-2px, 2px); }
+  83.25% { -moz-transform: translate(1px, -1px); }
+  100% { -moz-transform: translate(0, 0); }
+}
+
+@-o-keyframes wobbleToTopRight {
+  16.65% { -o-transform: translate(8px, -8px); }
+  33.3% { -o-transform: translate(-6px, 6px); }
+  49.95% { -o-transform: translate(4px, -4px); }
+  66.6% { -o-transform: translate(-2px, 2px); }
+  83.25% { -o-transform: translate(1px, -1px); }
+  100% { -o-transform: translate(0, 0); }
+}
+
+@keyframes wobbleToTopRight {
+  16.65% { transform: translate(8px, -8px); }
+  33.3% { transform: translate(-6px, 6px); }
+  49.95% { transform: translate(4px, -4px); }
+  66.6% { transform: translate(-2px, 2px); }
+  83.25% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animated.wobbleToTopRight {
+  -webkit-animation-name: wobbleToTopRight;
+  -moz-animation-name: wobbleToTopRight;
+  -o-animation-name: wobbleToTopRight;
+  animation-name: wobbleToTopRight;
+}
+
+/* Wobble Top */
+@-webkit-keyframes wobbleTop {
+  16.65% { -webkit-transform: skew(-12deg); }
+  33.3% { -webkit-transform: skew(10deg); }
+  49.95% { -webkit-transform: skew(-6deg); }
+  66.6% { -webkit-transform: skew(4deg); }
+  83.25% { -webkit-transform: skew(-2deg); }
+  100% { -webkit-transform: skew(0); }
+}
+
+@-moz-keyframes wobbleTop {
+  16.65% { -moz-transform: skew(-12deg); }
+  33.3% { -moz-transform: skew(10deg); }
+  49.95% { -moz-transform: skew(-6deg); }
+  66.6% { -moz-transform: skew(4deg); }
+  83.25% { -moz-transform: skew(-2deg); }
+  100% { -moz-transform: skew(0); }
+}
+
+@-o-keyframes wobbleTop {
+  16.65% { -o-transform: skew(-12deg); }
+  33.3% { -o-transform: skew(10deg); }
+  49.95% { -o-transform: skew(-6deg); }
+  66.6% { -o-transform: skew(4deg); }
+  83.25% { -o-transform: skew(-2deg); }
+  100% { -o-transform: skew(0); }
+}
+
+@keyframes wobbleTop {
+  16.65% { transform: skew(-12deg); }
+  33.3% { transform: skew(10deg); }
+  49.95% { transform: skew(-6deg); }
+  66.6% { transform: skew(4deg); }
+  83.25% { transform: skew(-2deg); }
+  100% { transform: skew(0); }
+}
+
+.animated.wobbleTop {
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-animation-name: wobbleTop;
+  -moz-animation-name: wobbleTop;
+  -o-animation-name: wobbleTop;
+  animation-name: wobbleTop;
+}
+
+/* Wobble Bottom */
+@-webkit-keyframes wobbleBottom {
+  16.65% { -webkit-transform: skew(-12deg); }
+  33.3% { -webkit-transform: skew(10deg); }
+  49.95% { -webkit-transform: skew(-6deg); }
+  66.6% { -webkit-transform: skew(4deg); }
+  83.25% { -webkit-transform: skew(-2deg); }
+  100% { -webkit-transform: skew(0); }
+}
+
+@-moz-keyframes wobbleBottom {
+  16.65% { -moz-transform: skew(-12deg); }
+  33.3% { -moz-transform: skew(10deg); }
+  49.95% { -moz-transform: skew(-6deg); }
+  66.6% { -moz-transform: skew(4deg); }
+  83.25% { -moz-transform: skew(-2deg); }
+  100% { -moz-transform: skew(0); }
+}
+
+@-o-keyframes wobbleBottom {
+  16.65% { -o-transform: skew(-12deg); }
+  33.3% { -o-transform: skew(10deg); }
+  49.95% { -o-transform: skew(-6deg); }
+  66.6% { -o-transform: skew(4deg); }
+  83.25% { -o-transform: skew(-2deg); }
+  100% { -o-transform: skew(0); }
+}
+
+@keyframes wobbleBottom {
+  16.65% { transform: skew(-12deg); }
+  33.3% { transform: skew(10deg); }
+  49.95% { transform: skew(-6deg); }
+  66.6% { transform: skew(4deg); }
+  83.25% { transform: skew(-2deg); }
+  100% { transform: skew(0); }
+}
+
+.animated.wobbleBottom {
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -o-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-animation-name: wobbleBottom;
+  -moz-animation-name: wobbleBottom;
+  -o-animation-name: wobbleBottom;
+  animation-name: wobbleBottom;
+}
+
+/* Wobble Skew */
+@-webkit-keyframes wobbleSkew {
+  16.65% { -webkit-transform: skew(-12deg); }
+  33.3% { -webkit-transform: skew(10deg); }
+  49.95% { -webkit-transform: skew(-6deg); }
+  66.6% { -webkit-transform: skew(4deg); }
+  83.25% { -webkit-transform: skew(-2deg); }
+  100% { -webkit-transform: skew(0); }
+}
+
+@-moz-keyframes wobbleSkew {
+  16.65% { -moz-transform: skew(-12deg); }
+  33.3% { -moz-transform: skew(10deg); }
+  49.95% { -moz-transform: skew(-6deg); }
+  66.6% { -moz-transform: skew(4deg); }
+  83.25% { -moz-transform: skew(-2deg); }
+  100% { -moz-transform: skew(0); }
+}
+
+@-o-keyframes wobbleSkew {
+  16.65% { -o-transform: skew(-12deg); }
+  33.3% { -o-transform: skew(10deg); }
+  49.95% { -o-transform: skew(-6deg); }
+  66.6% { -o-transform: skew(4deg); }
+  83.25% { -o-transform: skew(-2deg); }
+  100% { -o-transform: skew(0); }
+}
+
+@keyframes wobbleSkew {
+  16.65% { transform: skew(-12deg); }
+  33.3% { transform: skew(10deg); }
+  49.95% { transform: skew(-6deg); }
+  66.6% { transform: skew(4deg); }
+  83.25% { transform: skew(-2deg); }
+  100% { transform: skew(0); }
+}
+
+.animated.wobbleSkew {
+  -webkit-animation-name: wobbleSkew;
+  -moz-animation-name: wobbleSkew;
+  -o-animation-name: wobbleSkew;
+  animation-name: wobbleSkew;
+}
+
+/* Buzz */
+@-webkit-keyframes buzz {
+  50% { -webkit-transform: translateX(3px) rotate(2deg); }
+  100% { -webkit-transform: translateX(-3px) rotate(-2deg); }
+}
+
+@-moz-keyframes buzz {
+  50% { -moz-transform: translateX(3px) rotate(2deg); }
+  100% { -moz-transform: translateX(-3px) rotate(-2deg); }
+}
+
+@-o-keyframes buzz {
+  50% { -o-transform: translateX(3px) rotate(2deg); }
+  100% { -o-transform: translateX(-3px) rotate(-2deg); }
+}
+
+@keyframes buzz {
+  50% { transform: translateX(3px) rotate(2deg); }
+  100% { transform: translateX(-3px) rotate(-2deg); }
+}
+
+.animated.buzz {
+  -webkit-animation-name: buzz;
+  -moz-animation-name: buzz;
+  -o-animation-name: buzz;
+  animation-name: buzz;
+}
+
+/* Buzz Out */
+@-webkit-keyframes buzzOut {
+  10% { -webkit-transform: translateX(3px) rotate(2deg); }
+  20% { -webkit-transform: translateX(-3px) rotate(-2deg); }
+  30% { -webkit-transform: translateX(3px) rotate(2deg); }
+  40% { -webkit-transform: translateX(-3px) rotate(-2deg); }
+  50% { -webkit-transform: translateX(2px) rotate(1deg); }
+  60% { -webkit-transform: translateX(-2px) rotate(-1deg); }
+  70% { -webkit-transform: translateX(2px) rotate(1deg); }
+  80% { -webkit-transform: translateX(-2px) rotate(-1deg); }
+  90% { -webkit-transform: translateX(1px) rotate(0); }
+  100% { -webkit-transform: translateX(-1px) rotate(0); }
+}
+
+@-moz-keyframes buzzOut {
+  10% { -moz-transform: translateX(3px) rotate(2deg); }
+  20% { -moz-transform: translateX(-3px) rotate(-2deg); }
+  30% { -moz-transform: translateX(3px) rotate(2deg); }
+  40% { -moz-transform: translateX(-3px) rotate(-2deg); }
+  50% { -moz-transform: translateX(2px) rotate(1deg); }
+  60% { -moz-transform: translateX(-2px) rotate(-1deg); }
+  70% { -moz-transform: translateX(2px) rotate(1deg); }
+  80% { -moz-transform: translateX(-2px) rotate(-1deg); }
+  90% { -moz-transform: translateX(1px) rotate(0); }
+  100% { -moz-transform: translateX(-1px) rotate(0); }
+}
+
+@-o-keyframes buzzOut {
+  10% { -o-transform: translateX(3px) rotate(2deg); }
+  20% { -o-transform: translateX(-3px) rotate(-2deg); }
+  30% { -o-transform: translateX(3px) rotate(2deg); }
+  40% { -o-transform: translateX(-3px) rotate(-2deg); }
+  50% { -o-transform: translateX(2px) rotate(1deg); }
+  60% { -o-transform: translateX(-2px) rotate(-1deg); }
+  70% { -o-transform: translateX(2px) rotate(1deg); }
+  80% { -o-transform: translateX(-2px) rotate(-1deg); }
+  90% { -o-transform: translateX(1px) rotate(0); }
+  100% { -o-transform: translateX(-1px) rotate(0); }
+}
+
+@keyframes buzzOut {
+  10% { transform: translateX(3px) rotate(2deg); }
+  20% { transform: translateX(-3px) rotate(-2deg); }
+  30% { transform: translateX(3px) rotate(2deg); }
+  40% { transform: translateX(-3px) rotate(-2deg); }
+  50% { transform: translateX(2px) rotate(1deg); }
+  60% { transform: translateX(-2px) rotate(-1deg); }
+  70% { transform: translateX(2px) rotate(1deg); }
+  80% { transform: translateX(-2px) rotate(-1deg); }
+  90% { transform: translateX(1px) rotate(0); }
+  100% { transform: translateX(-1px) rotate(0); }
+}
+
+.animated.buzzOut {
+  -webkit-animation-name: buzzOut;
+  -moz-animation-name: buzzOut;
+  -o-animation-name: buzzOut;
+  animation-name: buzzOut;
+}
+
+/* Forward */
+@-webkit-keyframes forward {
+  100% { -webkit-transform: translateX(8px);  }
+}
+
+@-moz-keyframes forward {
+  100% { -moz-transform: translateX(8px);  }
+}
+
+@-o-keyframes forward { 
+  100% { -o-transform: translateX(8px);  }
+}
+
+@keyframes forward { 
+  100% { transform: translateX(8px);  }
+}
+
+.animated.forward {
+  -webkit-animation-name: forward;
+  -moz-animation-name: forward;
+  -o-animation-name: forward;
+  animation-name: forward;
+}
+
+/* Backward */
+@-webkit-keyframes backward {
+  100% { -webkit-transform: translateX(-8px);  }
+}
+
+@-moz-keyframes backward {
+  100% { -moz-transform: translateX(-8px);  }
+}
+
+@-o-keyframes backward { 
+  100% { -o-transform: translateX(-8px);  }
+}
+
+@keyframes backward { 
+  100% { transform: translateX(-8px);  }
+}
+
+.animated.backward {
+  -webkit-animation-name: backward;
+  -moz-animation-name: backward;
+  -o-animation-name: backward;
+  animation-name: backward;
+}

@@ -10,3 +10,8 @@ RewriteRule . /katycodes/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>

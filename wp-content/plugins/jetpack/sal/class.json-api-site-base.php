@@ -112,6 +112,10 @@ abstract class SAL_Site {
 	}
 
 	public function get_post_by_id( $post_id, $context ) {
+		// Remove the skyword tracking shortcode for posts returned via the API.
+		remove_shortcode( 'skyword-tracking' );
+		add_shortcode( 'skyword-tracking', '__return_empty_string' );
+
 		$post = get_post( $post_id, OBJECT, $context );
 
 		if ( ! $post ) {
@@ -295,6 +299,7 @@ abstract class SAL_Site {
 			'name' => $name,
 			'numberposts' => 1,
 			'post_type' => $this->get_whitelisted_post_types(),
+		    'suppress_filters' => false,
 		) );
 
 		if ( ! $posts || ! isset( $posts[0]->ID ) || ! $posts[0]->ID ) {
@@ -362,6 +367,7 @@ abstract class SAL_Site {
 			'list_users'          => current_user_can( 'list_users' ),
 			'manage_categories'   => current_user_can( 'manage_categories' ),
 			'manage_options'      => current_user_can( 'manage_options' ),
+			'moderate_comments'   => current_user_can( 'moderate_comments' ),
 			'activate_wordads'    => wpcom_get_blog_owner() === (int) get_current_user_id(),
 			'promote_users'       => current_user_can( 'promote_users' ),
 			'publish_posts'       => current_user_can( 'publish_posts' ),
@@ -548,5 +554,9 @@ abstract class SAL_Site {
 	function is_domain_only() {
 		$options = get_option( 'options' );
 		return ! empty ( $options['is_domain_only'] ) ? (bool) $options['is_domain_only'] : false;
+	}
+
+	function get_blog_public() {
+		return (int) get_option( 'blog_public' );
 	}
 }

@@ -46,9 +46,20 @@ if ( !class_exists( 'FooGallery_Thumbnails' ) ) {
 			//allow for plugins to change the thumbnail creation args
 			$args = apply_filters( 'foogallery_thumbnail_resize_args', $args, $original_image_src, $thumbnail_object );
 
+			//check the current arguments passed in by the shortcode
+			global $current_foogallery_arguments;
+			if ( isset( $current_foogallery_arguments ) && isset( $current_foogallery_arguments['template'] ) ) {
+				$thumbnail_args = apply_filters( 'foogallery_calculate_thumbnail_dimensions-' . $current_foogallery_arguments['template'], $args, $current_foogallery_arguments );
+				$args = wp_parse_args( $thumbnail_args, $args );
+			}
+
 			$width  = (int)$args['width'];
 			$height = (int)$args['height'];
 			$crop   = (bool)$args['crop'];
+
+			if ( 0 === $width && 0 === $height ) {
+				return $original_image_src;
+			}
 
 			//we can force the use of the originally uploaded full-size image
 			$force_use_original_image = isset( $args['force_use_original_image'] ) && true === $args['force_use_original_image'];
@@ -100,6 +111,8 @@ if ( !class_exists( 'FooGallery_Thumbnails' ) ) {
 
 			//save the generated thumb url to a global so that we can use it later if needed
             $foogallery_last_generated_thumb_url = wpthumb( $original_image_src, $args );
+
+			//TODO : get 'Force HTTPS' setting and replace all occurrences of http:// with https://
 
             return $foogallery_last_generated_thumb_url;
 		}
